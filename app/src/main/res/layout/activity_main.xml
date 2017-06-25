@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="30dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cactus angle"
+        android:layout_gravity="center"
+        android:textSize="30sp"/>
+
+    <Button
+    android:id="@+id/angle0"
+    android:layout_width="300dp"
+    android:layout_height="60dp"
+    android:layout_gravity="center"
+    android:text="0"/>
+
+    <Button
+        android:id="@+id/angle30"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:text="30"/>
+
+    <Button
+        android:id="@+id/angle50"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:text="50"/>
+
+    <Button
+        android:id="@+id/angle70"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:text="70"/>
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset DB"
+        android:layout_gravity="center"
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/resetDB"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:text="Reset"/>
+
+
+
+
+</LinearLayout>
