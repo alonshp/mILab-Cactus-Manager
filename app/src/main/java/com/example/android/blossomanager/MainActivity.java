@@ -18,8 +18,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     private String angle;
 
-    private boolean createLoader = false;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,7 +73,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     @Override
     public Loader<String> onCreateLoader(int id, Bundle args) {
-        createLoader = true;
         Uri baseUri = Uri.parse("http://blynk-cloud.com/" + BlynkAuth + "/update/V0?value=" + angle);
         Uri.Builder uriBuilder = baseUri.buildUpon();
         return new BlossomLoader(this, uriBuilder.toString());
@@ -83,10 +80,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     @Override
     public void onLoadFinished(Loader<String> loader, String data) {
-        if (createLoader = true){
-            createLoader = false;
-            Log.e(LOG_TAG, "loader finished");
-        }
+        Log.e(LOG_TAG, "loader finished");
+
+        getLoaderManager().destroyLoader(loader.getId());
     }
 
     @Override
