@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 
 
+
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<String> {
 
     private static final String LOG_TAG = MainActivity.class.getName();
@@ -24,8 +25,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         setContentView(R.layout.activity_main);
         Button angle0 = (Button) findViewById(R.id.angle0);
         Button angle30 = (Button) findViewById(R.id.angle30);
-        Button angle50 = (Button) findViewById(R.id.angle50);
-        Button angle70 = (Button) findViewById(R.id.angle70);
+        Button angle55 = (Button) findViewById(R.id.angle55);
         Button resetDB = (Button) findViewById(R.id.resetDB);
 
         final LoaderManager loaderManager = getLoaderManager();
@@ -46,21 +46,14 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             }
         });
 
-        angle50.setOnClickListener(new View.OnClickListener() {
+        angle55.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                angle = "50";
+                angle = "55";
                 loaderManager.restartLoader(1, null, MainActivity.this);
             }
         });
 
-        angle70.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                angle = "70";
-                loaderManager.restartLoader(1, null, MainActivity.this);
-            }
-        });
 
         resetDB.setOnClickListener(new View.OnClickListener() {
             @Override
